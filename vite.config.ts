@@ -13,7 +13,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
-  assetsInclude: ['**/*.glsl', '**/*.gltf', '**/*.glb', '**/*.mp3', '**/*.wav', '**/*.ogg', '**/*.mp4'],
+  assetsInclude: ['**/*.gltf', '**/*.glb', '**/*.mp3', '**/*.wav', '**/*.ogg', '**/*.mp4'],
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
