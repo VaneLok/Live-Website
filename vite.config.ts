@@ -2,8 +2,20 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
+// Plugin to import GLSL files as raw strings
+const glsl = () => {
+  return {
+    name: 'glsl',
+    transform(code: string, id: string) {
+      if (id.endsWith('.glsl')) {
+        return `export default ${JSON.stringify(code)};`
+      }
+    }
+  }
+}
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), glsl()],
   server: {
     port: 3000,
     host: true
