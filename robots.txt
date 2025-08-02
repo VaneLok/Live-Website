@@ -1,3 +1,23 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://jennsec.com/sitemap.xml
+
+# Directories
+Allow: /portfolio/
+Allow: /images/
+Allow: /assets/
+Allow: /js-dos/
+
+# Disallow unnecessary files
+Disallow: /*.map$
+Disallow: /bundler/
+Disallow: /draco/
+Disallow: /*.jsdos$
+Disallow: /*.zip$
+Disallow: /*.EXE$
+Disallow: /*.WAD$
+
+# Crawl-delay (optional - be considerate to servers)
+Crawl-delay: 1
